@@ -1,6 +1,6 @@
-var express = require("express");
-var request = require("request");
-var app = express();
+const express = require("express");
+const request = require("request");
+const app = express();
 
 //removing ejs extension
 app.set("view engine", "ejs");
@@ -19,7 +19,9 @@ app.get('/results', function(req, res) {
     request("https://www.omdbapi.com/?apikey=253f736&s=star", function(error, response, body) {
         if (!error && response.statusCode == 200) {
             const data = JSON.parse(body);
-            res.send(data["Search"]);
+            // res.send(data["Search"][0]);
+            res.render("result");
+
         }
     });
 });
