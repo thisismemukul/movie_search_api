@@ -1,13 +1,21 @@
 <%- include('partials/header') %>
 
     <div class="container-fluid text-center">
-        <h1>Search results for </h1>
-
+        <h1>Search results for: </h1>
+        <form action="/results" method="GET">
+            <div class="form-row align-items-center">
+                <div class="col-auto">
+                    <input type="text" class="mx-auto form-control mb-2 w-50" id="inlineFormInput" placeholder="Type Movie" name="search">
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                </div>
+            </div>
+        </form>
         <div class="container">
             <div class="row">
                 <% data["Search"].forEach(function(movie){ %>
-                    <div class="col-lg-3 col-sm-6">
-
+                    <div class="col-lg-3 col-sm-12">
                         <div class="card-deck p-0 m-2">
                             <div class="card">
                                 <img class=" card-img-top img-fluid rounded mx-auto d-block" src="<%= movie.Poster %>" alt="Card image cap Responsive image">
@@ -15,10 +23,10 @@
                                     <h5 class="card-title">
                                         <%= movie.Title %>
                                     </h5>
-                                    <p class="card-text">Released in Year -
+                                    <p class="card-text">Year -
                                         <%= movie.Year  %>
                                     </p>
-                                    <p class="card-text">IMDB_ID
+                                    <p id="imdbid" class="card-text">IMDB_ID
                                         <%= movie.imdbID  %>
                                     </p>
                                 </div>
@@ -27,8 +35,6 @@
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
 
                     <% }) %>

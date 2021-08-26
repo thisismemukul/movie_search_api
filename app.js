@@ -6,22 +6,19 @@ const app = express();
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
+app.get('/', function(req, res) {
+    console.log(query);
 
-app.get("/", function(req, res) {
-    res.render("home");
-});
+    var query = req.query.search;
 
-
-
-
-
-app.get('/results', function(req, res) {
-    request("https://www.omdbapi.com/?apikey=253f736&s=spider", function(error, response, body) {
+    console.log(query);
+    var url = "https://www.omdbapi.com/?apikey=253f736&s=" + query;
+    request(url, function(error, response, body) {
         if (!error && response.statusCode == 200) {
             const data = JSON.parse(body);
             // res.send(data["Search"][0]);
             // res.send(data);
-            res.render("result", { data: data });
+            res.render("home", { data: data });
 
         }
     });

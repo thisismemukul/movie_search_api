@@ -35,3 +35,10 @@ form {
     text-align: center;
     display: block;
 }
+
+
+/* @media (min-width:412px) {
+    p {
+        font-size: 12px;
+    }
+} */
