@@ -16,10 +16,11 @@ app.get("/", function(req, res) {
 
 
 app.get('/results', function(req, res) {
-    request("https://www.omdbapi.com/?apikey=253f736&s=star", function(error, response, body) {
+    request("https://www.omdbapi.com/?apikey=253f736&s=spider", function(error, response, body) {
         if (!error && response.statusCode == 200) {
             const data = JSON.parse(body);
             // res.send(data["Search"][0]);
+            // res.send(data);
             res.render("result", { data: data });
 
         }
