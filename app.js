@@ -1,7 +1,7 @@
 const express = require("express");
 const request = require("request");
 const app = express();
-
+const port = 3000;
 //removing ejs extension
 app.set("view engine", "ejs");
 app.use(express.static("public"));
@@ -31,5 +31,8 @@ app.get("*", function(req, res) {
 // app.listen(5500, function() {
 //     console.log("Server started at port 5500");
 // });
-const port = process.env.PORT || '5500';
-app.listen(port, () => console.log(`server on ${port}`));
+// const port = process.env.PORT || '5500';
+// app.listen(port, () => console.log(`server on ${port}`));
+app.listen(port, () => {
+    console.log(`Example app listening at ${port}`)
+})
