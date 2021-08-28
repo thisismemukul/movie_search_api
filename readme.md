@@ -1,4 +1,4 @@
-# patatap_clone
+# Movie Search Node App using API
 <p align="center">
 <a href="#"><img title="Movie Search App Demo" src=""></a>
 </p>
