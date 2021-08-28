@@ -1,12 +1,12 @@
 <%- include('partials/header') %>
     <div class="container-fluid text-center">
-        <h1>Search Another Movie</h1>
+        <h1 data-aos="slide-right">Search Another Movie</h1>
         <form action="/" method="GET">
             <div class="form-row align-items-center">
-                <div class="col-auto">
+                <div data-aos="slide-left" class="col-auto">
                     <input type="text" class="mx-auto form-control mb-2 w-50" id="inlineFormInput" placeholder="Type Movie" name="search">
                 </div>
-                <div class="col-auto">
+                <div data-aos="fade-in" class="col-auto">
                     <button type="submit" class="btn bubbly-button px-4">Search</button>
                 </div>
             </div>
@@ -19,7 +19,7 @@
             <% if(data["Response"].toLowerCase() === "true"){ %>
                 <!-- <p>Welcome Code_Breaker!</p> -->
                 <div class="jumbotron">
-                    <h1 class="display-4 text-center font-weight-bold">
+                    <h1 data-aos="fade-in" class="display-4 text-center font-weight-bold">
                         <strong><span id="results_head"> <%= data.Title %></span></strong>
                     </h1>
                     <p class="text-center">
@@ -28,7 +28,7 @@
                     </p>
 
                     <div class="row justify-content-center">
-                        <div class="col-lg-3 col-sm-12">
+                        <div data-aos="slide-up" class="col-lg-3 col-sm-12">
                             <div class="card-deck p-0 m-2">
                                 <div class="card">
                                     <img class=" card-img-top img-fluid rounded mx-auto d-block" src="<%= data.Poster %>" alt="Card image cap Responsive image">
@@ -41,7 +41,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-9 col-sm-12">
+                        <div data-aos="slide-left" class="col-lg-9 col-sm-12">
                             <div class="card-deck p-0 m-2">
                                 <div class="card border-none bg-card text-white">
                                     <div class="card-body  bg-card">
@@ -107,7 +107,7 @@
 
                     <hr>
                     <div class="row">
-                        <div class="col-lg-4 col-sm-12">
+                        <div data-aos="slide-right" class="col-lg-4 col-sm-12">
                             <div class="card-deck p-0 m-2">
                                 <div class="card border-none bg-card text-white">
                                     <div class="card-body  bg-card">
@@ -135,7 +135,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-sm-12">
+                        <div data-aos="slide-left" class="col-lg-6 col-sm-12">
                             <div class="card-deck p-0 m-2">
                                 <div class="card border-none bg-card text-white">
                                     <div class="card-body  bg-card">
@@ -157,7 +157,7 @@
                         </div>
                     </div>
                     <hr class="my-4">
-                    <div class="col-lg-12 col-sm-12">
+                    <div data-aos="flip-left" class="col-lg-12 col-sm-12">
                         <div class="card-deck p-0 m-2">
                             <div class="card border-none bg-card text-white">
                                 <div class="card-body  bg-card">
