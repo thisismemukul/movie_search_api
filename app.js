@@ -11,7 +11,8 @@ app.get('/', function(req, res) {
     if (typeof query !== "undefined") {
         var query = req.query.search;
     } else {
-        var query = "Harry";
+        var arr = ["Harry", "Avengers", "Pirates", "X-Men", "Captain", "Shershaah", "Dhoom", "Dabangg", "Hera Pheri"];
+        var query = arr[Math.floor(Math.random() * arr.length)];
     }
     var url = "https://www.omdbapi.com/?apikey=253f736&s=" + query;
     request(url, function(error, response, body) {
@@ -21,6 +22,27 @@ app.get('/', function(req, res) {
             //  res.send(data["Response"]);
             // console.log(data["Response"]);
             res.render("home", { data: data, query: query });
+        }
+    });
+});
+
+app.get('/id', function(req, res) {
+    var query = req.query.imdbid;
+    if (typeof query !== "undefined") {
+        var query = req.query.imdbid;
+    } else {
+        var arr = ["tt0076759", "tt0076759", "tt0076759", "X-Men", "tt0076759", "Shershaah", "Dhoom", "Dabangg", "Hera Pheri"];
+        var query = arr[Math.floor(Math.random() * arr.length)];
+    }
+
+    var url = "https://www.omdbapi.com/?apikey=253f736&i=" + query + "&plot=full";
+    request(url, function(error, response, body) {
+        if (!error && response.statusCode == 200) {
+            const data = JSON.parse(body);
+            // res.send(data["Search"][0]);
+            //  res.send(data["Response"]);
+            // console.log(data["Response"]);
+            res.render("info", { data: data, query: query });
         }
     });
 });

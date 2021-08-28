@@ -3,10 +3,6 @@ body {
     color: #ffffff;
 }
 
-p {
-    text-align: center;
-}
-
 #notfound {
     background-color: blueviolet;
     color: #ffffff;
@@ -38,7 +34,7 @@ a:hover {
     font-family: "Helvetica", "Arial", sans-serif;
     display: inline-block;
     font-size: 1em;
-    padding: 0.5em 2em;
+    /* padding: 0.5em 2em; */
     margin-top: 10px;
     margin-bottom: 6px;
     -webkit-appearance: none;
@@ -54,7 +50,7 @@ a:hover {
 }
 
 .bubbly-button:focus {
-    outline: 0;
+    outline: none;
 }
 
 .bubbly-button:hover {
@@ -136,6 +132,14 @@ form {
     align-items: center;
     text-align: center;
     display: block;
+}
+
+.bg-card {
+    background-color: #222222;
+}
+
+.list-group-flush {
+    border-bottom: #fff;
 }
 
 

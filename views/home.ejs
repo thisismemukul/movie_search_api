@@ -1,18 +1,18 @@
 <%- include('partials/header') %>
 
     <div class="container-fluid text-center">
-        <h1>Search results for
+        <h1 data-aos="slide-right">Search results for
             <span id="results_head">
                 <%= query %>
             </span>
         </h1>
         <form action="/" method="GET">
             <div class="form-row align-items-center">
-                <div class="col-auto">
+                <div data-aos="slide-left" class="col-auto">
                     <input type="text" class="mx-auto form-control mb-2 w-50" id="inlineFormInput" placeholder="Type Movie" name="search">
                 </div>
-                <div class="col-auto">
-                    <button type="submit" class="btn bubbly-button">Search</button>
+                <div data-aos="fade-in" class="col-auto">
+                    <button type="submit" class="btn bubbly-button px-4">Search</button>
                 </div>
             </div>
         </form>
@@ -22,7 +22,7 @@
                 <% if(data["Response"].toLowerCase() === "true"){ %>
                     <!-- <p>Welcome Code_Breaker!</p> -->
                     <% data["Search"].forEach(function(movie){ %>
-                        <div class="col-lg-3 col-sm-6">
+                        <div data-aos="zoom-in-up" class="col-lg-3 col-sm-6">
                             <div class="card-deck p-0 m-2">
                                 <div class="card">
                                     <img class=" card-img-top img-fluid rounded mx-auto d-block" src="<%= movie.Poster %>" alt="Card image cap Responsive image">
@@ -36,12 +36,12 @@
                                         <p id="imdbid" class="card-text">Type
                                             <%= movie.Type  %>
                                         </p>
-                                        <p class="card-text">IMDB_ID
-                                            <%= movie.imdbID  %>
-                                        </p>
                                     </div>
                                     <div class="card-footer">
-                                        <small class="text-muted">Last updated 3 mins ago</small>
+                                        <form action="/id" method="GET">
+                                            <input type="hidden" id="idFormInput" name="imdbid" value="<%= movie.imdbID  %>">
+                                            <button type="submit" class="btn btn-dark">View More Details</button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
