@@ -4,7 +4,6 @@
 </p>
 <h3> Website Link 🔗: https://lnkd.in/g8fAq6gd</h3>
 User can Search Lists of Movies and Series based on keywords. Users can see the Movie/Series details.
-S
 <h4>* Tech Stack used:</h4>
 <ul>
 <li>Bootstrap for Front end.</li>
