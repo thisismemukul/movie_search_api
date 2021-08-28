@@ -1,7 +1,7 @@
 # Movie Search Node App using API
 <p align="center">
 <a href="#"><img title="Movie Search App Demo" src=""></a>
-<img src="https://github.com/Voyz/voyz_public/blob/master/databay_promo_vidA_gif_A03.gif" alt="Databay showcase gif" title="Databay showcase gif" width="500"/>
+<img src="https://github.com/thisismemukul/movie_search_api/blob/main/public/vid/Movie%20search%20app%20Demo.gif" alt="Databay showcase gif" title="Databay showcase gif" width="500"/>
 </p>
 <h3> Website Link 🔗: https://lnkd.in/g8fAq6gd</h3>
 User can Search Lists of Movies and Series based on keywords. Users can see the Movie/Series details.
