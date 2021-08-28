@@ -8,13 +8,6 @@ body {
     color: #ffffff;
 }
 
-#notfound {
-    background-color: blueviolet;
-    color: #ffffff;
-    text-align: center;
-    padding: 12px;
-}
-
 #results_head {
     color: blueviolet;
 }
